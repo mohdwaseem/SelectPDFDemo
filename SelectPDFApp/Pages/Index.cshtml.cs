@@ -49,6 +49,7 @@ namespace SelectPDFApp.Pages
             {
                 AutoFitHeight = HtmlToPdfPageFitMode.AutoFit,
                 AutoFitWidth = HtmlToPdfPageFitMode.AutoFit,
+                WebPageWidth =793
             };
             converter.Footer.Add(footerHtml);
             // read parameters from the webpage
