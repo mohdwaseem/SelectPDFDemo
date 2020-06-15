@@ -13,6 +13,8 @@ namespace SelectPDFApp
 {
     public class Startup
     {
+        public static string ServerPath;
+        public static string WebRootPath;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -45,7 +47,8 @@ namespace SelectPDFApp
             {
                 app.UseExceptionHandler("/Error");
             }
-
+            ServerPath = env.ContentRootPath;
+            WebRootPath = env.WebRootPath;
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
